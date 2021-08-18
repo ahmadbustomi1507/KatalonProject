@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "d2046582-90b8-43bf-91cd-504c3bffe17a",
+		"name": "WP_Exercise_3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API OK - 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"prefix\": \"PT\",\r\n\"name\": \"Sejahtera\",\r\n\"suffix\": \"Tbk\",\r\n\"industry_id\": \"1\",\r\n\"employee_size\": \"500\",\r\n\"street\": \"Jl.Sudirman kav. 21\",\r\n\"place\": \"Sudirman Tower\",\r\n\"geograph_id\": 100,\r\n\"phone\": \"08561290092\",\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://run.mocky.io/v3/d21b4ef7-4076-4192-93a2-4c31c8f7a5cd",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"d21b4ef7-4076-4192-93a2-4c31c8f7a5cd"
+					]
+				},
+				"description": "Exercise 3. Response 200 API OK"
+			},
+			"response": []
+		},
+		{
+			"name": "API NOK - 400 - Bad Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"prefix\": \"PT\",\r\n\"name\": \"Sejahtera\",\r\n\"suffix\": \"Tbk\",\r\n\"industry_id\": \"1\",\r\n\"employee_size\": \"500\",\r\n\"street\": \"Jl.Sudirman kav. 21\",\r\n\"place\": \"Sudirman Tower\",\r\n\"geograph_id\": 100,\r\n\"phone\": \"08561290092\",\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://run.mocky.io/v3/a76b0091-c0f8-4d17-a51e-72c77ae36f17",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"a76b0091-c0f8-4d17-a51e-72c77ae36f17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API NOK - 404 - Not Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/d21b4ef7-4076-4192-93a2-4c31c8f7a5c",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"d21b4ef7-4076-4192-93a2-4c31c8f7a5c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API NOK - 500 - Internal Server Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/67b7c3df-8aa1-4e24-8af7-4c3a9fd796cd",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"67b7c3df-8aa1-4e24-8af7-4c3a9fd796cd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
