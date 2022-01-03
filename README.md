@@ -1,1 +1,1 @@
-# WP_TechnicalTest
+# Katalon project
